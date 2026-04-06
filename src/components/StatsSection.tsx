@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
+import { internships } from "@/data/internships";
+
+const uniqueFields = new Set(internships.map((i) => i.field));
+const uniqueLocations = new Set(internships.map((i) => i.location));
 
 const stats = [
-  { value: "225+", label: "Opportunities" },
-  { value: "50+", label: "Fields" },
-  { value: "100+", label: "Locations" },
+  { value: `${internships.length}+`, label: "Opportunities" },
+  { value: `${uniqueFields.size}+`, label: "Fields" },
+  { value: `${uniqueLocations.size}+`, label: "Locations" },
   { value: "HS", label: "Grade Level" },
 ];
 
