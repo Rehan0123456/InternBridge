@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import { categories } from "@/data/internships";
+import { categories, internships } from "@/data/internships";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const categoryColors = [
@@ -35,7 +35,7 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-1.5 text-sm font-medium text-muted-foreground mb-6">
             <Sparkles className="w-4 h-4" />
-            225+ Opportunities Live
+            {internships.length}+ Opportunities Live
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
@@ -68,7 +68,7 @@ const HeroSection = () => {
             {categories.map((cat, i) => (
               <span
                 key={cat}
-                className={`px-3 py-1 rounded-full text-xs font-semibold ${categoryColors[i]}`}
+                className={`px-3 py-1 rounded-full text-xs font-semibold ${categoryColors[i % categoryColors.length]}`}
               >
                 {cat}
               </span>

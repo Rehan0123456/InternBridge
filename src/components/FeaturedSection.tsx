@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar, ExternalLink } from "lucide-react";
 import { internships, fieldColors } from "@/data/internships";
 
 const featured = internships.filter((i) => i.featured);
@@ -15,13 +15,16 @@ const FeaturedSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {featured.map((item, i) => (
-            <motion.div
+            <motion.a
               key={item.id}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="bg-card border border-border rounded-2xl p-5 hover:shadow-lg transition-shadow group"
+              className="bg-card border border-border rounded-2xl p-5 hover:shadow-lg transition-shadow group block"
             >
               <span
                 className={`inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold mb-3 ${
@@ -30,8 +33,9 @@ const FeaturedSection = () => {
               >
                 {item.field}
               </span>
-              <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+              <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors flex items-center gap-2">
                 {item.name}
+                <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
               </h3>
               <div className="flex items-center gap-4 mt-3 text-xs text-muted-foreground">
                 <span className="flex items-center gap-1">
@@ -43,7 +47,7 @@ const FeaturedSection = () => {
                   {item.deadline}
                 </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
