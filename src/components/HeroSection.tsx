@@ -3,6 +3,7 @@ import { ArrowRight, Rocket, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { categories, internships } from "@/data/internships";
 import heroBg from "@/assets/hero-bg.jpg";
+import internbridgeLogo from "@/assets/internbridge-logo.png";
 
 const categoryColors = [
   "bg-emerald-100 text-emerald-700",
