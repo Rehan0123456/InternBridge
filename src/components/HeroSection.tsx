@@ -28,7 +28,7 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,6 +80,19 @@ const HeroSection = () => {
               </span>
             ))}
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="hidden lg:flex justify-center items-center"
+        >
+          <img
+            src={internbridgeLogo}
+            alt="InternBridge - High School Internship Platform"
+            className="w-full max-w-xl drop-shadow-2xl"
+          />
         </motion.div>
       </div>
     </section>
