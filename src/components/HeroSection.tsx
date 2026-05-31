@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Rocket, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { categories, internships } from "@/data/internships";
 import heroBg from "@/assets/hero-bg.jpg";
