@@ -3,7 +3,7 @@ import { ArrowRight, Rocket, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { categories, internships } from "@/data/internships";
 import heroBg from "@/assets/hero-bg.jpg";
-import internbridgeLogo from "@/assets/internbridge-logo.png";
+import internbridgeLogo from "@/assets/internbridge-logo.png.asset.json";
 
 const categoryColors = [
   "bg-emerald-100 text-emerald-700",
@@ -89,7 +89,7 @@ const HeroSection = () => {
           className="hidden lg:flex justify-center items-center"
         >
           <img
-            src={internbridgeLogo}
+            src={internbridgeLogo.url}
             alt="InternBridge - High School Internship Platform"
             className="w-full max-w-xl drop-shadow-2xl"
           />
