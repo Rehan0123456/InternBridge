@@ -57,7 +57,7 @@ const SponsoredSection = () => {
                   Gain hands-on experience working with an innovative team while building valuable professional skills. Apply today to take the next step in your career journey.
                 </p>
                 <p className="text-xs text-muted-foreground/80 font-medium">
-                  Powered by Cyma × InternBridge
+                  Powered by CYMA × InternBridge
                 </p>
               </div>
 
