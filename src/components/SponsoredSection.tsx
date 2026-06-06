@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Sparkles, ArrowRight } from "lucide-react";
+import cymaLogo from "@/assets/cyma-logo.jpeg.asset.json";
 
 const STORAGE_KEY = "cyma_sponsored_dismissed";
 
@@ -39,13 +40,18 @@ const SponsoredSection = () => {
             </button>
 
             <div className="flex flex-col md:flex-row md:items-center gap-6">
+              <img
+                src={cymaLogo.url}
+                alt="CYMA logo"
+                className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-contain bg-background/50 p-1 flex-shrink-0"
+              />
               <div className="flex-1 min-w-0">
                 <div className="inline-flex items-center gap-1.5 bg-primary/15 text-primary rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider mb-3">
                   <Sparkles className="w-3.5 h-3.5" />
                   Featured Opportunity
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 leading-tight">
-                  🚀 Featured Internship Opportunity with Cyma
+                  Featured Internship Opportunity with CYMA
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-2 max-w-2xl">
                   Gain hands-on experience working with an innovative team while building valuable professional skills. Apply today to take the next step in your career journey.
