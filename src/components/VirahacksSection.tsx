@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight } from "lucide-react";
+import virahacksLogo from "@/assets/virahacks-logo.png.asset.json";
 
 const STORAGE_KEY = "virahacks_sponsored_dismissed";
 
@@ -39,11 +40,11 @@ const VirahacksSection = () => {
             </button>
 
             <div className="flex flex-col md:flex-row md:items-center gap-6">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-2xl md:text-3xl font-black text-emerald-400 tracking-tighter">
-                  VH
-                </span>
-              </div>
+              <img
+                src={virahacksLogo.url}
+                alt="Virahacks logo"
+                className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-contain bg-background/50 p-2 flex-shrink-0"
+              />
               <div className="flex-1 min-w-0">
                 <div className="inline-flex items-center gap-1.5 bg-emerald-500/15 text-emerald-400 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider mb-3">
                   Partner Opportunity
