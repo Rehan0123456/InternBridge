@@ -13,6 +13,7 @@ const Internships = () => {
     return internships.filter(
       (i) =>
         i.name.toLowerCase().includes(q) ||
+        (i.organization || "").toLowerCase().includes(q) ||
         i.field.toLowerCase().includes(q) ||
         i.location.toLowerCase().includes(q)
     );
@@ -25,10 +26,10 @@ const Internships = () => {
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-black text-foreground mb-3">
-            High School Internships
+            Internship Opportunities
           </h1>
           <p className="text-muted-foreground">
-            Discover amazing internship opportunities across STEM, law, arts, business, and more
+            Browse curated internships with clear titles, organizations, locations, deadlines, categories, eligibility, and application links.
           </p>
           <p className="text-sm text-muted-foreground mt-2 flex items-center justify-center gap-1.5">
             <GraduationCap className="w-4 h-4" />
@@ -58,6 +59,7 @@ const Internships = () => {
             >
               <div>
                 <h3 className="text-base font-bold text-foreground">{item.name}</h3>
+                <p className="text-sm font-medium text-slate-500">Organization: {item.organization || item.name.split(" ")[0]}</p>
                 <div className="flex flex-wrap items-center gap-3 mt-2">
                   <span
                     className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-xs font-semibold ${
@@ -76,7 +78,7 @@ const Internships = () => {
                     {item.deadline}
                   </span>
                 </div>
-                <p className="text-xs text-muted-foreground mt-1.5">Grade: {item.grade}</p>
+                <p className="text-xs text-muted-foreground mt-1.5">Eligibility: {item.grade}</p>
               </div>
               <a
                 href={item.url}
@@ -84,7 +86,7 @@ const Internships = () => {
                 rel="noopener noreferrer"
                 className="shrink-0 inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity"
               >
-                Learn More
+                Apply
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </motion.div>

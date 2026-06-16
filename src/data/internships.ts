@@ -1,6 +1,7 @@
 export type Internship = {
   id: number;
   name: string;
+  organization?: string;
   field: string;
   location: string;
   deadline: string;
