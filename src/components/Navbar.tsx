@@ -4,6 +4,7 @@ import logo from "@/assets/internbridge-logo.png.asset.json";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Explore", path: "/internships" },
+  { label: "Partners", path: "/partnerships" },
   { label: "About", path: "/about" },
 ];
 
